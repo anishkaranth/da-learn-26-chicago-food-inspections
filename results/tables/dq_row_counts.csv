@@ -1,0 +1,14 @@
+entity,raw_rows,distinct_rows,clean_rows,grain
+agg_area_year,,,1326,community area x year
+agg_facility_year,,,203133,facility x year
+agg_zip_month,,,11914,ZIP x month
+completed inspections (Pass / Pass w/ Conditions / Fail),,,272061,inspection
+dim_community_area (77 + unknown),,,78,community area
+dim_date,,,6126,"day, 2010-01-01 .. last inspection"
+dim_facility,,,49547,license number (or name + address when no license)
+dim_inspection_type,,,99,standardised inspection type
+dim_result / dim_risk,,,12,8 + 4
+dim_violation,,,110,code on the 2010 form or the 2018 form
+raw inspection rows (food_inspections.csv),316963,316851,316851,inspection report (clean = fact_inspection)
+"reports without an outcome (Out of Business, No Entry, Not Ready, Not Located)",,,44790,report
+violation items parsed from the Violations text (fact_violation),,,1026610,cited violation

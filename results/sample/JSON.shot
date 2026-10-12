@@ -1,0 +1,229 @@
+{
+ "snapshot": "headline KPIs + run config",
+ "project": "da-learn-26-chicago-food-inspections",
+ "source_mode": "sample",
+ "engine": "duckdb 1.5.6",
+ "config": {
+  "sql_dialect": "Spark SQL style (+ DuckDB shims in sql/00), run on DuckDB; Databricks skipped (workspace quota)",
+  "snapshot": "portal export downloaded 2026-10-12 IST; inspections 2010-01-04 .. 2026-10-09 (2026 = partial year)",
+  "grain": "fact_inspection = one inspection report; fact_violation = one cited violation item; dim_facility = license number",
+  "dedupe_rule": "reports identical in every column except Inspection ID collapsed (lowest ID kept); same-day near-duplicates flagged",
+  "rate_rule": "rates use completed inspections (Pass, Pass w/ Conditions, Fail); Out of Business / No Entry / Not Ready excluded",
+  "code_rule": "violation codes joined on (form, code): 2010 form before 2018-07-01 (Critical 1-14, Serious 15-29, Minor 30-45), 2018 Food Code form after (risk factors 1-29, good retail 30-58, admin 59-64; Priority/PF/Core from comments)",
+  "geo_rule": "community area = point-in-polygon of the report coordinates in the 77 official boundaries; ranked with >= 500 completed inspections; ZIPs ranked with >= 1,000",
+  "sample_rule": "data/raw: full history of facilities with license % 40 = 0 + edge cases; scripts/make_sample.py"
+ },
+ "headline": {
+  "raw_rows": 7500,
+  "inspection_reports": 7498,
+  "exact_duplicates_removed": 2,
+  "completed_inspections": 6365,
+  "not_inspected_reports": 1133,
+  "facilities": 1334,
+  "first_date": "2010-01-04",
+  "last_date": "2026-10-07",
+  "pass_pct": 60.55,
+  "pass_conditions_pct": 17.33,
+  "fail_pct": 22.12,
+  "fail_pct_2010_form": 21.85,
+  "fail_pct_2018_form": 22.45,
+  "pass_conditions_pct_2010_form": 10.21,
+  "pass_conditions_pct_2018_form": 26.05,
+  "violation_citations": 23753,
+  "avg_citations_per_inspection": 3.7,
+  "canvass_fail_pct": 21.47,
+  "complaint_fail_pct": 29.85,
+  "license_fail_pct": 34.73,
+  "reinspection_fail_pct": 8.89,
+  "after_fail_next_pass_pct": 77.16,
+  "after_fail_next_pass_conditions_pct": 11.98,
+  "after_fail_next_fail_pct": 10.86,
+  "after_fail_median_days_to_next": 7.0,
+  "facilities_ever_failed_pct": 56.17,
+  "repeat_fail_pct_of_failed_facilities": 44.55,
+  "high_risk_fail_pct": 21.35,
+  "low_risk_fail_pct": 28.39,
+  "priority_citation_fail_pct": 56.94,
+  "core_only_fail_pct": 1.13,
+  "zips_ranked": 0,
+  "zip_fail_pct_max": null,
+  "zip_fail_pct_min": null,
+  "areas_ranked": 2,
+  "area_fail_pct_max": 18.67,
+  "area_fail_pct_min": 18.06
+ },
+ "era": [
+  {
+   "code_scheme": "2010",
+   "completed": 3505,
+   "pass_pct": 67.93,
+   "pass_conditions_pct": 10.21,
+   "fail_pct": 21.85,
+   "avg_citations": 3.29
+  },
+  {
+   "code_scheme": "2018",
+   "completed": 2860,
+   "pass_pct": 51.5,
+   "pass_conditions_pct": 26.05,
+   "fail_pct": 22.45,
+   "avg_citations": 4.19
+  }
+ ],
+ "yearly_fail_pct": [
+  {"year": 2010, "completed": 478, "fail_pct": 30.54, "pass_conditions_pct": 7.53},
+  {"year": 2011, "completed": 354, "fail_pct": 25.99, "pass_conditions_pct": 7.91},
+  {"year": 2012, "completed": 391, "fail_pct": 23.53, "pass_conditions_pct": 7.42},
+  {"year": 2013, "completed": 360, "fail_pct": 17.22, "pass_conditions_pct": 8.06},
+  {"year": 2014, "completed": 428, "fail_pct": 18.22, "pass_conditions_pct": 10.75},
+  {"year": 2015, "completed": 412, "fail_pct": 18.93, "pass_conditions_pct": 15.53},
+  {"year": 2016, "completed": 458, "fail_pct": 19.43, "pass_conditions_pct": 12.88},
+  {"year": 2017, "completed": 431, "fail_pct": 20.88, "pass_conditions_pct": 10.44},
+  {"year": 2018, "completed": 354, "fail_pct": 21.47, "pass_conditions_pct": 31.64},
+  {"year": 2019, "completed": 368, "fail_pct": 20.11, "pass_conditions_pct": 50.82},
+  {"year": 2020, "completed": 295, "fail_pct": 19.32, "pass_conditions_pct": 36.95},
+  {"year": 2021, "completed": 308, "fail_pct": 22.08, "pass_conditions_pct": 27.92},
+  {"year": 2022, "completed": 319, "fail_pct": 23.51, "pass_conditions_pct": 17.24},
+  {"year": 2023, "completed": 377, "fail_pct": 25.2, "pass_conditions_pct": 16.45},
+  {"year": 2024, "completed": 397, "fail_pct": 23.43, "pass_conditions_pct": 16.37},
+  {"year": 2025, "completed": 368, "fail_pct": 22.83, "pass_conditions_pct": 12.77},
+  {"year": 2026, "completed": 267, "fail_pct": 22.1, "pass_conditions_pct": 16.48}
+ ],
+ "inspection_type": [
+  {"inspection_kind": "Canvass", "completed": 2990, "fail_pct": 21.47},
+  {"inspection_kind": "Complaint", "completed": 958, "fail_pct": 29.85},
+  {"inspection_kind": "License", "completed": 930, "fail_pct": 34.73},
+  {"inspection_kind": "Canvass re-inspection", "completed": 736, "fail_pct": 7.61},
+  {"inspection_kind": "License re-inspection", "completed": 333, "fail_pct": 10.21},
+  {"inspection_kind": "Complaint re-inspection", "completed": 303, "fail_pct": 10.56}
+ ],
+ "risk": [
+  {"risk": "Risk 1 (High)", "completed": 4768, "fail_pct": 21.35},
+  {"risk": "Risk 2 (Medium)", "completed": 1116, "fail_pct": 22.58},
+  {"risk": "Risk 3 (Low)", "completed": 472, "fail_pct": 28.39}
+ ],
+ "after_fail": [
+  {
+   "failed_inspection_type": "All fails",
+   "fails": 1408,
+   "next_pass_pct": 77.16,
+   "next_pass_conditions_pct": 11.98,
+   "next_fail_pct": 10.86,
+   "median_days_to_next": 7.0
+  },
+  {
+   "failed_inspection_type": "Canvass",
+   "fails": 642,
+   "next_pass_pct": 79.2,
+   "next_pass_conditions_pct": 12.96,
+   "next_fail_pct": 7.84,
+   "median_days_to_next": 7.0
+  },
+  {
+   "failed_inspection_type": "License",
+   "fails": 323,
+   "next_pass_pct": 79.0,
+   "next_pass_conditions_pct": 7.67,
+   "next_fail_pct": 13.33,
+   "median_days_to_next": 7.0
+  },
+  {
+   "failed_inspection_type": "Complaint",
+   "fails": 286,
+   "next_pass_pct": 72.4,
+   "next_pass_conditions_pct": 14.7,
+   "next_fail_pct": 12.9,
+   "median_days_to_next": 7.0
+  },
+  {
+   "failed_inspection_type": "Canvass re-inspection",
+   "fails": 56,
+   "next_pass_pct": 68.52,
+   "next_pass_conditions_pct": 14.81,
+   "next_fail_pct": 16.67,
+   "median_days_to_next": 5.0
+  },
+  {
+   "failed_inspection_type": "License re-inspection",
+   "fails": 34,
+   "next_pass_pct": 70.97,
+   "next_pass_conditions_pct": 12.9,
+   "next_fail_pct": 16.13,
+   "median_days_to_next": 14.0
+  },
+  {
+   "failed_inspection_type": "Complaint re-inspection",
+   "fails": 32,
+   "next_pass_pct": 76.67,
+   "next_pass_conditions_pct": 10.0,
+   "next_fail_pct": 13.33,
+   "median_days_to_next": 6.5
+  }
+ ],
+ "fail_driver": [
+  {
+   "code_scheme": "2010",
+   "worst_citation": "1 Critical",
+   "completed": 503,
+   "fail_pct": 54.67,
+   "share_of_fails": 35.9
+  },
+  {
+   "code_scheme": "2010",
+   "worst_citation": "2 Serious",
+   "completed": 488,
+   "fail_pct": 75.41,
+   "share_of_fails": 48.04
+  },
+  {
+   "code_scheme": "2010",
+   "worst_citation": "3 Minor / other only",
+   "completed": 1849,
+   "fail_pct": 1.14,
+   "share_of_fails": 2.74
+  },
+  {
+   "code_scheme": "2010",
+   "worst_citation": "4 No citations",
+   "completed": 665,
+   "fail_pct": 15.34,
+   "share_of_fails": 13.32
+  },
+  {
+   "code_scheme": "2018",
+   "worst_citation": "1 Priority",
+   "completed": 346,
+   "fail_pct": 56.94,
+   "share_of_fails": 30.69
+  },
+  {
+   "code_scheme": "2018",
+   "worst_citation": "2 Priority foundation",
+   "completed": 951,
+   "fail_pct": 42.69,
+   "share_of_fails": 63.24
+  },
+  {
+   "code_scheme": "2018",
+   "worst_citation": "3 Core / untagged only",
+   "completed": 1065,
+   "fail_pct": 1.13,
+   "share_of_fails": 1.87
+  },
+  {
+   "code_scheme": "2018",
+   "worst_citation": "4 No citations",
+   "completed": 498,
+   "fail_pct": 5.42,
+   "share_of_fails": 4.21
+  }
+ ],
+ "top_zip_fail_top5": [],
+ "top_area_fail_top5": [
+  {"rnk": 1, "community_area": "Loop", "completed": 600, "fail_pct": 18.67},
+  {"rnk": 2, "community_area": "Near North Side", "completed": 526, "fail_pct": 18.06}
+ ],
+ "assertions_passed": 24,
+ "assertions_skipped_on_sample": 3,
+ "assertions_total": 27
+}

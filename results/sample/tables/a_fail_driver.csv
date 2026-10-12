@@ -1,0 +1,9 @@
+code_scheme,worst_citation,completed,pass_pct,pass_conditions_pct,fail_pct,share_of_fails
+2010,1 Critical,503,0.6,44.73,54.67,35.9
+2010,2 Serious,488,1.02,23.57,75.41,48.04
+2010,3 Minor / other only,1849,98.05,0.81,1.14,2.74
+2010,4 No citations,665,84.21,0.45,15.34,13.32
+2018,1 Priority,346,0.0,43.06,56.94,30.69
+2018,2 Priority foundation,951,0.63,56.68,42.69,63.24
+2018,3 Core / untagged only,1065,94.93,3.94,1.13,1.87
+2018,4 No citations,498,91.57,3.01,5.42,4.21

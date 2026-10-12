@@ -1,0 +1,37 @@
+facility_group,risk_key,risk,completed,fail_pct
+Bakery,1,Risk 1 (High),1892,24.31
+Bakery,2,Risk 2 (Medium),2062,24.78
+Bakery,3,Risk 3 (Low),22,22.73
+"Bar, tavern & liquor",1,Risk 1 (High),46,39.13
+"Bar, tavern & liquor",2,Risk 2 (Medium),96,29.17
+"Bar, tavern & liquor",3,Risk 3 (Low),1512,36.84
+Catering & banquet,1,Risk 1 (High),1781,18.98
+Catering & banquet,2,Risk 2 (Medium),115,13.91
+Catering & banquet,3,Risk 3 (Low),59,42.37
+Daycare & children,1,Risk 1 (High),15002,19.88
+Daycare & children,2,Risk 2 (Medium),47,14.89
+Daycare & children,3,Risk 3 (Low),39,10.26
+Grocery & convenience,1,Risk 1 (High),12093,21.91
+Grocery & convenience,2,Risk 2 (Medium),10088,28.07
+Grocery & convenience,3,Risk 3 (Low),11484,29.02
+Hospital & long-term care,1,Risk 1 (High),4549,20.22
+Hospital & long-term care,2,Risk 2 (Medium),146,2.05
+Hospital & long-term care,3,Risk 3 (Low),55,12.73
+"Mobile, kiosk & events",1,Risk 1 (High),263,25.48
+"Mobile, kiosk & events",2,Risk 2 (Medium),1552,26.16
+"Mobile, kiosk & events",3,Risk 3 (Low),1107,25.38
+Other,1,Risk 1 (High),515,19.22
+Other,2,Risk 2 (Medium),835,18.8
+Other,3,Risk 3 (Low),261,34.48
+Restaurant,1,Risk 1 (High),151510,21.92
+Restaurant,2,Risk 2 (Medium),31093,20.54
+Restaurant,3,Risk 3 (Low),2215,24.56
+School,1,Risk 1 (High),18338,22.54
+School,2,Risk 2 (Medium),1095,19.63
+School,3,Risk 3 (Low),454,19.38
+Unknown,1,Risk 1 (High),418,44.02
+Unknown,2,Risk 2 (Medium),163,49.69
+Unknown,3,Risk 3 (Low),183,55.19
+Wholesale & shared kitchen,1,Risk 1 (High),434,21.89
+Wholesale & shared kitchen,2,Risk 2 (Medium),193,34.72
+Wholesale & shared kitchen,3,Risk 3 (Low),302,34.77

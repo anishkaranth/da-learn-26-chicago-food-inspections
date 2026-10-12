@@ -1,0 +1,8 @@
+failed_inspection_type,fails,with_next_inspection,next_pass_pct,next_pass_conditions_pct,next_fail_pct,median_days_to_next,next_within_30d_pct,next_is_reinspection_pct
+All fails,61031,59426,76.78,11.49,11.73,7.0,91.43,94.52
+Canvass,29971,29387,78.32,12.1,9.58,7.0,95.02,97.22
+Canvass re-inspection,3051,2988,73.86,10.44,15.7,5.0,87.81,95.05
+Complaint,11317,11087,75.21,12.49,12.3,7.0,95.45,96.44
+Complaint re-inspection,1439,1389,69.62,11.16,19.22,5.0,91.04,97.05
+License,12662,12214,76.15,10.22,13.63,8.0,82.89,87.25
+License re-inspection,1382,1325,76.38,8.91,14.72,7.0,86.47,97.58

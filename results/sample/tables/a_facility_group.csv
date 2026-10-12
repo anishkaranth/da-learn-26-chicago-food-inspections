@@ -1,0 +1,13 @@
+facility_group,completed,facilities,pass_pct,pass_conditions_pct,fail_pct,avg_citations
+Bakery,160,20,55.0,16.25,28.75,4.74
+"Bar, tavern & liquor",30,17,50.0,10.0,40.0,2.57
+Catering & banquet,29,9,72.41,13.79,13.79,2.24
+Daycare & children,300,50,65.33,10.67,24.0,2.93
+Grocery & convenience,863,231,57.59,16.69,25.72,3.86
+Hospital & long-term care,70,25,65.71,11.43,22.86,3.21
+"Mobile, kiosk & events",46,29,73.91,4.35,21.74,0.87
+Other,40,14,50.0,22.5,27.5,3.1
+Restaurant,4468,699,60.38,18.71,20.9,3.86
+School,293,35,67.58,12.97,19.45,2.43
+Unknown,48,39,60.42,0.0,39.58,0.42
+Wholesale & shared kitchen,18,7,66.67,5.56,27.78,1.94

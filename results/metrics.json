@@ -1,0 +1,273 @@
+{
+ "project": "da-learn-26-chicago-food-inspections",
+ "dataset": "City of Chicago Food Inspections (CDPH Food Protection Program, data.cityofchicago.org dataset 4ijn-s7e5; Kaggle 'Chicago Food Inspections'), City of Chicago Data Portal Terms of Use. Snapshot downloaded 2026-10-12: 316,963 rows x 17 columns, 347,860,264 B, inspections 2010-01-04 .. 2026-10-09 + Chicago community-area boundaries (igwz-8jzy) for the area lookup",
+ "source_mode": "full",
+ "kpis": {
+  "raw_rows": 316963,
+  "inspection_reports": 316851,
+  "exact_duplicates_removed": 112,
+  "completed_inspections": 272061,
+  "not_inspected_reports": 44790,
+  "facilities": 49547,
+  "first_date": "2010-01-04",
+  "last_date": "2026-10-09",
+  "pass_pct": 60.29,
+  "pass_conditions_pct": 17.27,
+  "fail_pct": 22.43,
+  "fail_pct_2010_form": 22.18,
+  "fail_pct_2018_form": 22.75,
+  "pass_conditions_pct_2010_form": 10.93,
+  "pass_conditions_pct_2018_form": 25.21,
+  "violation_citations": 1026610,
+  "avg_citations_per_inspection": 3.75,
+  "canvass_fail_pct": 22.62,
+  "complaint_fail_pct": 29.94,
+  "license_fail_pct": 33.98,
+  "reinspection_fail_pct": 9.77,
+  "after_fail_next_pass_pct": 76.78,
+  "after_fail_next_pass_conditions_pct": 11.49,
+  "after_fail_next_fail_pct": 11.73,
+  "after_fail_median_days_to_next": 7.0,
+  "facilities_ever_failed_pct": 58.97,
+  "repeat_fail_pct_of_failed_facilities": 50.6,
+  "high_risk_fail_pct": 21.83,
+  "low_risk_fail_pct": 29.05,
+  "priority_citation_fail_pct": 59.12,
+  "core_only_fail_pct": 1.58,
+  "zips_ranked": 57,
+  "zip_fail_pct_max": 29.75,
+  "zip_fail_pct_min": 12.39,
+  "areas_ranked": 74,
+  "area_fail_pct_max": 33.52,
+  "area_fail_pct_min": 13.35
+ },
+ "analysis_tables": [
+  "tables/a_kpi_headline.csv",
+  "tables/a_result_mix.csv",
+  "tables/a_yearly.csv",
+  "tables/a_era.csv",
+  "tables/a_monthly.csv",
+  "tables/a_seasonal.csv",
+  "tables/a_weekday.csv",
+  "tables/a_facility_group.csv",
+  "tables/a_facility_type_top.csv",
+  "tables/a_risk.csv",
+  "tables/a_risk_group.csv",
+  "tables/a_zip.csv",
+  "tables/a_community_area.csv",
+  "tables/a_geo_fit.csv",
+  "tables/a_map_grid.csv",
+  "tables/a_after_fail.csv",
+  "tables/a_reinspection_lag.csv",
+  "tables/a_repeat_fail.csv",
+  "tables/a_top_fail_facilities.csv",
+  "tables/a_inspection_type.csv",
+  "tables/a_type_year.csv",
+  "tables/a_violation_theme.csv",
+  "tables/a_violation_top.csv",
+  "tables/a_fail_driver.csv",
+  "tables/a_citation_count.csv"
+ ],
+ "data_quality": {
+  "row_counts": [
+   {
+    "entity": "raw inspection rows (food_inspections.csv)",
+    "raw_rows": 316963,
+    "distinct_rows": 316851,
+    "clean_rows": 316851,
+    "grain": "inspection report (clean = fact_inspection)"
+   },
+   {
+    "entity": "completed inspections (Pass / Pass w/ Conditions / Fail)",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 272061,
+    "grain": "inspection"
+   },
+   {
+    "entity": "reports without an outcome (Out of Business, No Entry, Not Ready, Not Located)",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 44790,
+    "grain": "report"
+   },
+   {
+    "entity": "violation items parsed from the Violations text (fact_violation)",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 1026610,
+    "grain": "cited violation"
+   },
+   {
+    "entity": "dim_facility",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 49547,
+    "grain": "license number (or name + address when no license)"
+   },
+   {
+    "entity": "dim_date",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 6126,
+    "grain": "day, 2010-01-01 .. last inspection"
+   },
+   {
+    "entity": "dim_inspection_type",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 99,
+    "grain": "standardised inspection type"
+   },
+   {
+    "entity": "dim_violation",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 110,
+    "grain": "code on the 2010 form or the 2018 form"
+   },
+   {
+    "entity": "dim_community_area (77 + unknown)",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 78,
+    "grain": "community area"
+   },
+   {
+    "entity": "dim_result / dim_risk",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 12,
+    "grain": "8 + 4"
+   },
+   {
+    "entity": "agg_zip_month",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 11914,
+    "grain": "ZIP x month"
+   },
+   {
+    "entity": "agg_area_year",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 1326,
+    "grain": "community area x year"
+   },
+   {
+    "entity": "agg_facility_year",
+    "raw_rows": null,
+    "distinct_rows": null,
+    "clean_rows": 203133,
+    "grain": "facility x year"
+   }
+  ],
+  "null_rates": [
+   {
+    "entity": "raw",
+    "column_name": "License #",
+    "null_pct": 0.27,
+    "treatment": "blank or 0: facility keyed by name + address instead"
+   },
+   {
+    "entity": "raw",
+    "column_name": "Facility Type",
+    "null_pct": 1.69,
+    "treatment": "kept, facility_group = Unknown"
+   },
+   {
+    "entity": "raw",
+    "column_name": "Risk (blank or All)",
+    "null_pct": 0.05,
+    "treatment": "kept, risk_key = 0 (Unknown / All)"
+   },
+   {
+    "entity": "raw",
+    "column_name": "City",
+    "null_pct": 0.06,
+    "treatment": "imputed CHICAGO when the ZIP is a Chicago ZIP"
+   },
+   {"entity": "raw", "column_name": "Zip", "null_pct": 0.01, "treatment": "kept, left out of the ZIP ranking"},
+   {
+    "entity": "raw",
+    "column_name": "Latitude / Longitude",
+    "null_pct": 0.33,
+    "treatment": "not geocoded: kept, community area 0 (unknown)"
+   },
+   {
+    "entity": "raw",
+    "column_name": "Violations",
+    "null_pct": 28.21,
+    "treatment": "no violation cited (normal for clean passes and non-inspections)"
+   },
+   {"entity": "raw", "column_name": "AKA Name", "null_pct": 0.77, "treatment": "optional trading name"},
+   {
+    "entity": "raw",
+    "column_name": "Inspection ID / DBA Name / Inspection Date / Results",
+    "null_pct": 0.0,
+    "treatment": "required: never empty"
+   }
+  ],
+  "issues": {
+   "exact duplicate reports (identical except Inspection ID), dropped": 112,
+   "same facility + day + type + result but different content (possible duplicates), kept + listed": 691,
+   "missing license number (blank or 0), keyed by name + address": 850,
+   "missing facility type": 5344,
+   "risk blank or All, risk_key 0": 174,
+   "not geocoded (no latitude / longitude)": 1061,
+   "geocoded but outside all 77 community areas": 324,
+   "city misspellings of CHICAGO fixed (CCHICAGO, CHICAGOO, 312CHICAGO, ...)": 118,
+   "blank city imputed CHICAGO from a Chicago ZIP": 144,
+   "city still blank": 38,
+   "address outside Chicago (suburb city name), kept + flagged": 280,
+   "ZIP outside Chicago, kept + flagged": 270,
+   "ZIP blank": 42,
+   "Fail with no violation text": 3647,
+   "violations recorded on a report without an outcome (Out of Business, No Entry ...)": 907,
+   "same violation code cited more than once in one inspection (extra items)": 65139,
+   "facility-type spellings merged by upper-casing / trimming": 55,
+   "inspection-type spellings merged by upper-casing / trimming": 12,
+   "licenses seen with more than one business name (ownership / name changes)": 1249,
+   "licenses seen at more than one address": 343,
+   "code list switch: inspections on the 2018 Food Code form (from 1 Jul 2018)": 144068
+  },
+  "assertions": {
+   "distinct reports = raw rows - exact duplicates": "PASS",
+   "Inspection ID unique in raw and in fact_inspection": "PASS",
+   "fact_inspection = cln_inspections (no report lost in joins)": "PASS",
+   "every inspection date parsed and not after the snapshot": "PASS",
+   "every result is one of the 7 published values": "PASS",
+   "risk_key in 0..3, facility_group and type_group never null": "PASS",
+   "fact keys exist in every dimension (RI)": "PASS",
+   "facility_key and facility_id unique in dim_facility": "PASS",
+   "every violation item parsed to a code known on its form (2010: 1-45, 70; 2018: 1-64)": "PASS",
+   "violation items = items in the raw text (split on |)": "PASS",
+   "citation levels (Priority / PF / Core) only on 2018-form items": "PASS",
+   "per-inspection citation counts sum to fact_violation": "PASS",
+   "completed + not inspected = all reports and completed shares sum to 100%": "PASS",
+   "a_yearly: pass + conditions + fail = completed, totals = w_base": "PASS",
+   "a_after_fail All fails = every completed Fail": "PASS",
+   "next / previous completed inspection is never earlier (days >= 0)": "PASS",
+   "agg_zip_month sums back to fact_inspection (reports, completed, fails)": "PASS",
+   "agg_area_year and agg_facility_year sum back to fact_inspection": "PASS",
+   "dim_facility totals = fact_inspection (reports, completed, fails)": "PASS",
+   "a_repeat_fail covers every inspected facility": "PASS",
+   "dim_date is gap-free from 1 Jan of the first year to the last inspection": "PASS",
+   "names and addresses standardised (upper case, trimmed, single spaces)": "PASS",
+   "no CHICAGO misspelling left in city": "PASS",
+   "geocoded points inside the Chicago box (lat 41.6-42.1, lng -87.95..-87.5)": "PASS",
+   "every full year 2010-2025 has >= 10,000 completed inspections [full data only]": "PASS",
+   "all 77 community areas have completed inspections, >= 70 ranked (>= 500) [full data only]": "PASS",
+   ">= 99% of geocoded reports fall inside a community area [full data only]": "PASS"
+  }
+ },
+ "engine": {"duckdb": "1.5.6", "python": "3.13.5"},
+ "sql_timings_s": {
+  "00_duckdb_compat.sql": 0.004,
+  "01_staging.sql": 1.02,
+  "02_cleaning.sql": 3.573,
+  "03_model.sql": 0.824,
+  "04_analysis.sql": 1.044,
+  "05_quality_checks.sql": 1.18
+ }
+}

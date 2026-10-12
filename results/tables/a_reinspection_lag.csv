@@ -1,0 +1,8 @@
+lag_band,fails,pct_of_fails,next_passed_pct
+1 0-7 days,32867,53.85,88.85
+2 8-14 days,18609,30.49,90.77
+3 15-30 days,4323,7.08,85.31
+4 31-90 days,2276,3.73,76.67
+5 91-365 days,1104,1.81,69.2
+6 over 1 year,247,0.4,66.4
+9 none yet / closed,1605,2.63,

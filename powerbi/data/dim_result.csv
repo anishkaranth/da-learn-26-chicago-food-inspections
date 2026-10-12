@@ -1,0 +1,9 @@
+result_key,result,result_group,is_completed
+0,Unknown,Not inspected,0
+1,Pass,Pass,1
+2,Pass w/ Conditions,Pass w/ Conditions,1
+3,Fail,Fail,1
+4,Out of Business,Not inspected,0
+5,No Entry,Not inspected,0
+6,Not Ready,Not inspected,0
+7,Business Not Located,Not inspected,0

@@ -1,0 +1,28 @@
+check_name,failed_rows,status
+>= 99% of geocoded reports fall inside a community area [full data only],0,SKIP
+Inspection ID unique in raw and in fact_inspection,0,PASS
+a_after_fail All fails = every completed Fail,0,PASS
+a_repeat_fail covers every inspected facility,0,PASS
+"a_yearly: pass + conditions + fail = completed, totals = w_base",0,PASS
+agg_area_year and agg_facility_year sum back to fact_inspection,0,PASS
+"agg_zip_month sums back to fact_inspection (reports, completed, fails)",0,PASS
+"all 77 community areas have completed inspections, >= 70 ranked (>= 500) [full data only]",3,SKIP
+citation levels (Priority / PF / Core) only on 2018-form items,0,PASS
+completed + not inspected = all reports and completed shares sum to 100%,0,PASS
+dim_date is gap-free from 1 Jan of the first year to the last inspection,0,PASS
+"dim_facility totals = fact_inspection (reports, completed, fails)",0,PASS
+distinct reports = raw rows - exact duplicates,0,PASS
+"every full year 2010-2025 has >= 10,000 completed inspections [full data only]",16,SKIP
+every inspection date parsed and not after the snapshot,0,PASS
+every result is one of the 7 published values,0,PASS
+"every violation item parsed to a code known on its form (2010: 1-45, 70; 2018: 1-64)",0,PASS
+facility_key and facility_id unique in dim_facility,0,PASS
+fact keys exist in every dimension (RI),0,PASS
+fact_inspection = cln_inspections (no report lost in joins),0,PASS
+"geocoded points inside the Chicago box (lat 41.6-42.1, lng -87.95..-87.5)",0,PASS
+"names and addresses standardised (upper case, trimmed, single spaces)",0,PASS
+next / previous completed inspection is never earlier (days >= 0),0,PASS
+no CHICAGO misspelling left in city,0,PASS
+per-inspection citation counts sum to fact_violation,0,PASS
+"risk_key in 0..3, facility_group and type_group never null",0,PASS
+violation items = items in the raw text (split on |),0,PASS

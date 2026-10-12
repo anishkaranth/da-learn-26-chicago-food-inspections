@@ -1,0 +1,111 @@
+code_scheme,code,title,official_class,theme
+2010,1,"SOURCE SOUND CONDITION, NO SPOILAGE, FOODS PROPERLY LABELED, SHELLFISH TAGS IN PLACE",Critical,Food protection & labelling
+2010,2,FACILITIES TO MAINTAIN PROPER TEMPERATURE,Critical,Temperature & time control
+2010,3,"POTENTIALLY HAZARDOUS FOOD MEETS TEMPERATURE REQUIREMENT DURING STORAGE, PREPARATION DISPLAY AND SERVICE",Critical,Temperature & time control
+2010,4,"SOURCE OF CROSS CONTAMINATION CONTROLLED I.E. CUTTING BOARDS, FOOD HANDLERS, UTENSILS, ETC",Critical,Food protection & labelling
+2010,5,"PERSONNEL WITH INFECTIONS RESTRICTED: NO OPEN SORES, WOUNDS, ETC",Critical,"Hand washing, hygiene & toilets"
+2010,6,"HANDS WASHED AND CLEANED, GOOD HYGIENIC PRACTICES; NO BARE HAND CONTACT WITH READY-TO-EAT FOODS.",Critical,"Hand washing, hygiene & toilets"
+2010,7,WASH AND RINSE WATER: CLEAN AND PROPER TEMPERATURE,Critical,Cleaning & sanitizing
+2010,8,"SANITIZING RINSE FOR EQUIPMENT AND UTENSILS: CLEAN, PROPER TEMPERATURE, CONCENTRATION, EXPOSURE TIME",Critical,Cleaning & sanitizing
+2010,9,"WATER SOURCE: SAFE, HOT & COLD UNDER CITY PRESSURE",Critical,"Water, plumbing & sewage"
+2010,10,"SEWAGE AND WASTE WATER DISPOSAL, NO BACK SIPHONAGE, CROSS CONNECTION AND/OR BACK FLOW",Critical,"Water, plumbing & sewage"
+2010,11,"ADEQUATE NUMBER, CONVENIENT, ACCESSIBLE, DESIGNED, AND MAINTAINED",Critical,"Hand washing, hygiene & toilets"
+2010,12,"HAND WASHING FACILITIES: WITH SOAP AND SANITARY HAND DRYING DEVICES, CONVENIENT AND ACCESSIBLE TO FOOD PREP AREA",Critical,"Hand washing, hygiene & toilets"
+2010,13,"NO EVIDENCE OF RODENT OR INSECT INFESTATION, NO BIRDS, TURTLES OR OTHER ANIMALS",Critical,Pests & rodents
+2010,14,"PREVIOUS SERIOUS VIOLATION CORRECTED, 7-42-090",Critical,Administrative & follow-up
+2010,15,UNWRAPPED AND POTENTIALLY HAZARDOUS FOOD NOT RE-SERVED,Serious,Food protection & labelling
+2010,16,"FOOD PROTECTED DURING STORAGE, PREPARATION, DISPLAY, SERVICE AND TRANSPORTATION",Serious,Food protection & labelling
+2010,17,POTENTIALLY HAZARDOUS FOOD PROPERLY THAWED,Serious,Temperature & time control
+2010,18,"NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS",Serious,Pests & rodents
+2010,19,"OUTSIDE GARBAGE WASTE GREASE AND STORAGE AREA; CLEAN, RODENT PROOF, ALL CONTAINERS COVERED",Serious,Physical facilities & maintenance
+2010,20,"INSIDE CONTAINERS OR RECEPTACLES: ADEQUATE NUMBER, PROPERLY COVERED AND INSECT/RODENT PROOF",Serious,Physical facilities & maintenance
+2010,21,* CERTIFIED FOOD MANAGER ON SITE WHEN POTENTIALLY HAZARDOUS FOODS ARE PREPARED AND SERVED,Serious,"Management, certification & training"
+2010,22,"DISH MACHINES: PROVIDED WITH ACCURATE THERMOMETERS, CHEMICAL TEST KITS AND SUITABLE GAUGE COCK",Serious,Cleaning & sanitizing
+2010,23,"DISHES AND UTENSILS FLUSHED, SCRAPED, SOAKED",Serious,Cleaning & sanitizing
+2010,24,"DISH WASHING FACILITIES: PROPERLY DESIGNED, CONSTRUCTED, MAINTAINED, INSTALLED, LOCATED AND OPERATED",Serious,Cleaning & sanitizing
+2010,25,"TOXIC ITEMS PROPERLY STORED, LABELED AND USED",Serious,Food protection & labelling
+2010,26,"ADEQUATE NUMBER, CONVENIENT, ACCESSIBLE, PROPERLY DESIGNED AND INSTALLED",Serious,"Hand washing, hygiene & toilets"
+2010,27,"TOILET ROOMS ENCLOSED CLEAN, PROVIDED WITH HAND CLEANSER, SANITARY HAND DRYING DEVICES AND PROPER WASTE RECEPTACLES",Serious,"Hand washing, hygiene & toilets"
+2010,28,* INSPECTION REPORT SUMMARY DISPLAYED AND VISIBLE TO ALL CUSTOMERS,Serious,Administrative & follow-up
+2010,29,PREVIOUS MINOR VIOLATION(S) CORRECTED 7-42-090,Serious,Administrative & follow-up
+2010,30,"FOOD IN ORIGINAL CONTAINER, PROPERLY LABELED: CUSTOMER ADVISORY POSTED AS NEEDED",Minor,Food protection & labelling
+2010,31,CLEAN MULTI-USE UTENSILS AND SINGLE SERVICE ARTICLES PROPERLY STORED: NO REUSE OF SINGLE SERVICE ARTICLES,Minor,Cleaning & sanitizing
+2010,32,"FOOD AND NON-FOOD CONTACT SURFACES PROPERLY DESIGNED, CONSTRUCTED AND MAINTAINED",Minor,Physical facilities & maintenance
+2010,33,"FOOD AND NON-FOOD CONTACT EQUIPMENT UTENSILS CLEAN, FREE OF ABRASIVE DETERGENTS",Minor,Cleaning & sanitizing
+2010,34,"FLOORS: CONSTRUCTED PER CODE, CLEANED, GOOD REPAIR, COVING INSTALLED, DUST-LESS CLEANING METHODS USED",Minor,Physical facilities & maintenance
+2010,35,"WALLS, CEILINGS, ATTACHED EQUIPMENT CONSTRUCTED PER CODE: GOOD REPAIR, SURFACES CLEAN AND DUST-LESS CLEANING METHODS",Minor,Physical facilities & maintenance
+2010,36,"LIGHTING: REQUIRED MINIMUM FOOT-CANDLES OF LIGHT PROVIDED, FIXTURES SHIELDED",Minor,Physical facilities & maintenance
+2010,37,TOILET ROOM DOORS SELF CLOSING: DRESSING ROOMS WITH LOCKERS PROVIDED: COMPLETE SEPARATION FROM LIVING/SLEEPING QUARTERS,Minor,Physical facilities & maintenance
+2010,38,VENTILATION: ROOMS AND EQUIPMENT VENTED AS REQUIRED: PLUMBING: INSTALLED AND MAINTAINED,Minor,Physical facilities & maintenance
+2010,39,LINEN: CLEAN AND SOILED PROPERLY STORED,Minor,Cleaning & sanitizing
+2010,40,REFRIGERATION AND METAL STEM THERMOMETERS PROVIDED AND CONSPICUOUS,Minor,Temperature & time control
+2010,41,"PREMISES MAINTAINED FREE OF LITTER, UNNECESSARY ARTICLES, CLEANING EQUIPMENT PROPERLY STORED",Minor,Physical facilities & maintenance
+2010,42,APPROPRIATE METHOD OF HANDLING OF FOOD (ICE) HAIR RESTRAINTS AND CLEAN APPAREL WORN,Minor,"Hand washing, hygiene & toilets"
+2010,43,"FOOD (ICE) DISPENSING UTENSILS, WASH CLOTHS PROPERLY STORED",Minor,Food protection & labelling
+2010,44,ONLY AUTHORIZED PERSONNEL IN THE FOOD-PREP AREA,Minor,"Management, certification & training"
+2010,45,FOOD HANDLER REQUIREMENTS MET,Minor,"Management, certification & training"
+2010,70,NO SMOKING REGULATIONS,Other,Administrative & follow-up
+2018,1,"PERSON IN CHARGE PRESENT, DEMONSTRATES KNOWLEDGE, AND PERFORMS DUTIES",Risk factor / public health intervention,"Management, certification & training"
+2018,2,CITY OF CHICAGO FOOD SERVICE SANITATION CERTIFICATE,Risk factor / public health intervention,"Management, certification & training"
+2018,3,"MANAGEMENT, FOOD EMPLOYEE AND CONDITIONAL EMPLOYEE; KNOWLEDGE, RESPONSIBILITIES AND REPORTING",Risk factor / public health intervention,"Management, certification & training"
+2018,4,PROPER USE OF RESTRICTION AND EXCLUSION,Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,5,PROCEDURES FOR RESPONDING TO VOMITING AND DIARRHEAL EVENTS,Risk factor / public health intervention,"Management, certification & training"
+2018,6,"PROPER EATING, TASTING, DRINKING, OR TOBACCO USE",Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,7,"NO DISCHARGE FROM EYES, NOSE, AND MOUTH",Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,8,HANDS CLEAN & PROPERLY WASHED,Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,9,NO BARE HAND CONTACT WITH RTE FOOD OR A PRE-APPROVED ALTERNATIVE PROCEDURE PROPERLY ALLOWED,Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,10,ADEQUATE HANDWASHING SINKS PROPERLY SUPPLIED AND ACCESSIBLE,Risk factor / public health intervention,"Hand washing, hygiene & toilets"
+2018,11,FOOD OBTAINED FROM APPROVED SOURCE,Risk factor / public health intervention,Food protection & labelling
+2018,12,FOOD RECEIVED AT PROPER TEMPERATURE,Risk factor / public health intervention,Food protection & labelling
+2018,13,"FOOD IN GOOD CONDITION, SAFE, & UNADULTERATED",Risk factor / public health intervention,Food protection & labelling
+2018,14,"REQUIRED RECORDS AVAILABLE: SHELLSTOCK TAGS, PARASITE DESTRUCTION",Risk factor / public health intervention,Food protection & labelling
+2018,15,FOOD SEPARATED AND PROTECTED,Risk factor / public health intervention,Food protection & labelling
+2018,16,FOOD-CONTACT SURFACES: CLEANED & SANITIZED,Risk factor / public health intervention,Cleaning & sanitizing
+2018,17,"PROPER DISPOSITION OF RETURNED, PREVIOUSLY SERVED, RECONDITIONED & UNSAFE FOOD",Risk factor / public health intervention,Food protection & labelling
+2018,18,PROPER COOKING TIME & TEMPERATURES,Risk factor / public health intervention,Temperature & time control
+2018,19,PROPER REHEATING PROCEDURES FOR HOT HOLDING,Risk factor / public health intervention,Temperature & time control
+2018,20,PROPER COOLING TIME AND TEMPERATURE,Risk factor / public health intervention,Temperature & time control
+2018,21,PROPER HOT HOLDING TEMPERATURES,Risk factor / public health intervention,Temperature & time control
+2018,22,PROPER COLD HOLDING TEMPERATURES,Risk factor / public health intervention,Temperature & time control
+2018,23,PROPER DATE MARKING AND DISPOSITION,Risk factor / public health intervention,Temperature & time control
+2018,24,TIME AS A PUBLIC HEALTH CONTROL; PROCEDURES & RECORDS,Risk factor / public health intervention,Temperature & time control
+2018,25,CONSUMER ADVISORY PROVIDED FOR RAW/UNDERCOOKED FOOD,Risk factor / public health intervention,Food protection & labelling
+2018,26,PASTEURIZED FOODS USED; PROHIBITED FOODS NOT OFFERED,Risk factor / public health intervention,Food protection & labelling
+2018,27,FOOD ADDITIVES: APPROVED AND PROPERLY USED,Risk factor / public health intervention,Food protection & labelling
+2018,28,"TOXIC SUBSTANCES PROPERLY IDENTIFIED, STORED, & USED",Risk factor / public health intervention,Food protection & labelling
+2018,29,COMPLIANCE WITH VARIANCE/SPECIALIZED PROCESS/HACCP,Risk factor / public health intervention,"Management, certification & training"
+2018,30,PASTEURIZED EGGS USED WHERE REQUIRED,Good retail practice,Food protection & labelling
+2018,31,WATER & ICE FROM APPROVED SOURCE,Good retail practice,Food protection & labelling
+2018,32,VARIANCE OBTAINED FOR SPECIALIZED PROCESSING METHODS,Good retail practice,"Management, certification & training"
+2018,33,PROPER COOLING METHODS USED; ADEQUATE EQUIPMENT FOR TEMPERATURE CONTROL,Good retail practice,Temperature & time control
+2018,34,PLANT FOOD PROPERLY COOKED FOR HOT HOLDING,Good retail practice,Temperature & time control
+2018,35,APPROVED THAWING METHODS USED,Good retail practice,Temperature & time control
+2018,36,THERMOMETERS PROVIDED & ACCURATE,Good retail practice,Temperature & time control
+2018,37,FOOD PROPERLY LABELED; ORIGINAL CONTAINER,Good retail practice,Food protection & labelling
+2018,38,"INSECTS, RODENTS, & ANIMALS NOT PRESENT",Good retail practice,Pests & rodents
+2018,39,"CONTAMINATION PREVENTED DURING FOOD PREPARATION, STORAGE & DISPLAY",Good retail practice,Food protection & labelling
+2018,40,PERSONAL CLEANLINESS,Good retail practice,"Hand washing, hygiene & toilets"
+2018,41,WIPING CLOTHS: PROPERLY USED & STORED,Good retail practice,Cleaning & sanitizing
+2018,42,WASHING FRUITS & VEGETABLES,Good retail practice,Food protection & labelling
+2018,43,IN-USE UTENSILS: PROPERLY STORED,Good retail practice,Cleaning & sanitizing
+2018,44,"UTENSILS, EQUIPMENT & LINENS: PROPERLY STORED, DRIED, & HANDLED",Good retail practice,Cleaning & sanitizing
+2018,45,SINGLE-USE/SINGLE-SERVICE ARTICLES: PROPERLY STORED & USED,Good retail practice,Cleaning & sanitizing
+2018,46,GLOVES USED PROPERLY,Good retail practice,"Hand washing, hygiene & toilets"
+2018,47,"FOOD & NON-FOOD CONTACT SURFACES CLEANABLE, PROPERLY DESIGNED, CONSTRUCTED & USED",Good retail practice,Physical facilities & maintenance
+2018,48,"WAREWASHING FACILITIES: INSTALLED, MAINTAINED & USED; TEST STRIPS",Good retail practice,Cleaning & sanitizing
+2018,49,NON-FOOD/FOOD CONTACT SURFACES CLEAN,Good retail practice,Cleaning & sanitizing
+2018,50,HOT & COLD WATER AVAILABLE; ADEQUATE PRESSURE,Good retail practice,"Water, plumbing & sewage"
+2018,51,PLUMBING INSTALLED; PROPER BACKFLOW DEVICES,Good retail practice,"Water, plumbing & sewage"
+2018,52,SEWAGE & WASTE WATER PROPERLY DISPOSED,Good retail practice,"Water, plumbing & sewage"
+2018,53,"TOILET FACILITIES: PROPERLY CONSTRUCTED, SUPPLIED, & CLEANED",Good retail practice,"Hand washing, hygiene & toilets"
+2018,54,GARBAGE & REFUSE PROPERLY DISPOSED; FACILITIES MAINTAINED,Good retail practice,Physical facilities & maintenance
+2018,55,"PHYSICAL FACILITIES INSTALLED, MAINTAINED & CLEAN",Good retail practice,Physical facilities & maintenance
+2018,56,ADEQUATE VENTILATION & LIGHTING; DESIGNATED AREAS USED,Good retail practice,Physical facilities & maintenance
+2018,57,ALL FOOD EMPLOYEES HAVE FOOD HANDLER TRAINING,Good retail practice,"Management, certification & training"
+2018,58,ALLERGEN TRAINING AS REQUIRED,Good retail practice,"Management, certification & training"
+2018,59,PREVIOUS PRIORITY FOUNDATION VIOLATION CORRECTED,Administrative,Administrative & follow-up
+2018,60,PREVIOUS CORE VIOLATION CORRECTED,Administrative,Administrative & follow-up
+2018,61,SUMMARY REPORT DISPLAYED AND VISIBLE TO THE PUBLIC,Administrative,Administrative & follow-up
+2018,62,COMPLIANCE WITH CLEAN INDOOR AIR ORDINANCE,Administrative,Administrative & follow-up
+2018,63,REMOVAL OF SUSPENSION SIGN,Administrative,Administrative & follow-up
+2018,64,MISCELLANEOUS / PUBLIC HEALTH ORDERS,Administrative,Administrative & follow-up

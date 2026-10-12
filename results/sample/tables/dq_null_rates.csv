@@ -1,0 +1,10 @@
+entity,column_name,null_pct,treatment
+raw,AKA Name,0.88,optional trading name
+raw,City,0.29,imputed CHICAGO when the ZIP is a Chicago ZIP
+raw,Facility Type,2.39,"kept, facility_group = Unknown"
+raw,Inspection ID / DBA Name / Inspection Date / Results,0.0,required: never empty
+raw,Latitude / Longitude,0.47,"not geocoded: kept, community area 0 (unknown)"
+raw,License #,0.35,blank or 0: facility keyed by name + address instead
+raw,Risk (blank or All),0.13,"kept, risk_key = 0 (Unknown / All)"
+raw,Violations,30.11,no violation cited (normal for clean passes and non-inspections)
+raw,Zip,0.11,"kept, left out of the ZIP ranking"

@@ -1,0 +1,22 @@
+check_name,affected_rows
+Fail with no violation text,3647
+ZIP blank,42
+"ZIP outside Chicago, kept + flagged",270
+"address outside Chicago (suburb city name), kept + flagged",280
+blank city imputed CHICAGO from a Chicago ZIP,144
+"city misspellings of CHICAGO fixed (CCHICAGO, CHICAGOO, 312CHICAGO, ...)",118
+city still blank,38
+code list switch: inspections on the 2018 Food Code form (from 1 Jul 2018),144068
+"exact duplicate reports (identical except Inspection ID), dropped",112
+facility-type spellings merged by upper-casing / trimming,55
+geocoded but outside all 77 community areas,324
+inspection-type spellings merged by upper-casing / trimming,12
+licenses seen at more than one address,343
+licenses seen with more than one business name (ownership / name changes),1249
+missing facility type,5344
+"missing license number (blank or 0), keyed by name + address",850
+not geocoded (no latitude / longitude),1061
+"risk blank or All, risk_key 0",174
+"same facility + day + type + result but different content (possible duplicates), kept + listed",691
+same violation code cited more than once in one inspection (extra items),65139
+"violations recorded on a report without an outcome (Out of Business, No Entry ...)",907

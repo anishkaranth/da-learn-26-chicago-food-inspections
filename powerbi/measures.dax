@@ -1,0 +1,48 @@
+// _Measures table · da-learn-26 Chicago food inspections
+// Fact measures run on the 5%-of-facilities sample; the *(full)* measures use the complete aggregate tables.
+
+Reports = COUNTROWS ( fact_inspection_sample )
+Completed Inspections = CALCULATE ( COUNTROWS ( fact_inspection_sample ), fact_inspection_sample[is_completed] = 1 )
+Fails = CALCULATE ( COUNTROWS ( fact_inspection_sample ), fact_inspection_sample[is_fail] = 1 )
+Passes = CALCULATE ( [Completed Inspections], fact_inspection_sample[result_key] = 1 )
+Passes w Conditions = CALCULATE ( [Completed Inspections], fact_inspection_sample[result_key] = 2 )
+Fail Rate % = DIVIDE ( [Fails], [Completed Inspections] )
+Pass Rate % = DIVIDE ( [Passes], [Completed Inspections] )
+Pass w Conditions % = DIVIDE ( [Passes w Conditions], [Completed Inspections] )
+Facilities Inspected = CALCULATE ( DISTINCTCOUNT ( fact_inspection_sample[facility_key] ), fact_inspection_sample[is_completed] = 1 )
+Violations per Inspection = DIVIDE ( CALCULATE ( SUM ( fact_inspection_sample[n_citations] ), fact_inspection_sample[is_completed] = 1 ), [Completed Inspections] )
+
+// re-inspection outcomes: the next completed inspection after a Fail
+Fails Followed Up = CALCULATE ( [Fails], NOT ISBLANK ( fact_inspection_sample[next_result_key] ) )
+Next Pass After Fail % =
+    DIVIDE ( CALCULATE ( [Fails], fact_inspection_sample[next_result_key] = 1 ), [Fails Followed Up] )
+Next Fail After Fail % =
+    DIVIDE ( CALCULATE ( [Fails], fact_inspection_sample[next_result_key] = 3 ), [Fails Followed Up] )
+Median Days to Next After Fail =
+    CALCULATE ( MEDIAN ( fact_inspection_sample[days_to_next_completed] ), fact_inspection_sample[is_fail] = 1 )
+Re-inspection Fail Rate % = CALCULATE ( [Fail Rate %], fact_inspection_sample[is_reinspection] = 1 )
+
+// repeat failure at facility level
+Facilities Ever Failed = COUNTROWS ( FILTER ( VALUES ( fact_inspection_sample[facility_key] ), [Fails] > 0 ) )
+Facilities Failed 2+ = COUNTROWS ( FILTER ( VALUES ( fact_inspection_sample[facility_key] ), [Fails] >= 2 ) )
+Repeat Fail % of Failed Facilities = DIVIDE ( [Facilities Failed 2+], [Facilities Ever Failed] )
+
+// violations (slice by dim_violation[code_scheme] / [theme] / [official_class])
+Violation Items = COUNTROWS ( fact_violation_sample )
+Inspections Citing = DISTINCTCOUNT ( fact_violation_sample[inspection_id] )
+% of Fails Citing =
+    DIVIDE ( CALCULATE ( DISTINCTCOUNT ( fact_violation_sample[inspection_id] ), fact_violation_sample[result_key] = 3 ),
+             CALCULATE ( [Fails], ALL ( dim_violation ) ) )
+% of Passes Citing =
+    DIVIDE ( CALCULATE ( DISTINCTCOUNT ( fact_violation_sample[inspection_id] ), fact_violation_sample[result_key] = 1 ),
+             CALCULATE ( [Passes], ALL ( dim_violation ) ) )
+Priority Inspection Fail Rate % =
+    CALCULATE ( [Fail Rate %], fact_inspection_sample[n_priority] > 0, fact_inspection_sample[code_scheme] = "2018" )
+
+// complete aggregates (full data)
+Completed (full) = SUM ( agg_area_year[completed] )
+Fails (full) = SUM ( agg_area_year[fails] )
+Fail Rate % (full) = DIVIDE ( [Fails (full)], [Completed (full)] )
+Pass w Conditions % (full) = DIVIDE ( SUM ( agg_area_year[pass_conditions] ), [Completed (full)] )
+ZIP Fail Rate % (full) = DIVIDE ( SUM ( agg_zip_month[fails] ), SUM ( agg_zip_month[completed] ) )
+ZIP Completed (full) = SUM ( agg_zip_month[completed] )

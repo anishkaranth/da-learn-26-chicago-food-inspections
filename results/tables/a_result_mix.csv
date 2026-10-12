@@ -1,0 +1,8 @@
+result_key,result,result_group,reports,pct_of_reports,pct_of_completed
+1,Pass,Pass,164039,51.77,60.29
+2,Pass w/ Conditions,Pass w/ Conditions,46991,14.83,17.27
+3,Fail,Fail,61031,19.26,22.43
+4,Out of Business,Not inspected,25870,8.16,
+5,No Entry,Not inspected,14199,4.48,
+6,Not Ready,Not inspected,4625,1.46,
+7,Business Not Located,Not inspected,96,0.03,
